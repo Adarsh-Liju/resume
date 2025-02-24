@@ -1,142 +1,90 @@
-\documentclass{resume} % Use the custom resume.cls style
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.6in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
 
-\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Adarsh Liju Abraham} % Your name
-% You can merge both of these into a single line, if you do not have a website.
-\address{8088229177 \\ Bengaluru, India} 
-\address{\href{mailto:adarsh.liju.abraham@gmail.com}{adarsh.liju.abraham@gmail.com} \\ \href{https://www.linkedin.com/in/adarsh-liju-abraham-880104216/}{LinkedIn} \\ \href{https://github.com/Adarsh-Liju}{GitHub} } %
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\renewcommand{\labelitemi}{$\bullet$}
+
+\newcommand{\name}[1]{\Huge \textbf{#1} \\[12pt]}
+\newcommand{\address}[1]{\small #1 \\}
+\newcommand{\contact}[1]{\small #1 \\}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	OBJECTIVE
-%----------------------------------------------------------------------------------------
+\begin{center}
+   \name{Adarsh Liju Abraham}
+   \address{8088229177 \\ Bengaluru, India}
+   \address{\href{mailto:adarsh.liju.abraham@gmail.com}{adarsh.liju.abraham@gmail.com}}
+   \address{\href{https://www.linkedin.com/in/adarsh-liju-abraham-880104216/}{LinkedIn} \\ \href{https://github.com/Adarsh-Liju}{GitHub}}
+\end{center}
 
-% \begin{rSection}{OBJECTIVE}
+\section*{Qualifications}
+\textbf{Bachelor of Technology, Computer Science}, PES University \hfill {2020 – present} \\
+Relevant Coursework: Operating Systems, Computer Networks, Cloud Computing, Database Management System.
 
-% {Software Engineer with 2+ years of experience in XXX, seeking full-time XXX roles.}
-
-
-% \end{rSection}
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Qualifications}
-\vspace{0.25cm}
-{\bf Bachelor of Technology, Computer Science}, PES University \hfill {2020 - present}\\
-Relevant Coursework: Operating Systems, Computer Networks, Cloud Computing,\\ Database Management System.
-
-% {\bf Bachelor of Computer Science}, Stanford University \hfill {2014 - 2017}
-%Minor in Linguistics \smallskip \\
-%Member of Eta Kappa Nu \\
-%Member of Upsilon Pi Epsilon \\
+\section*{Skills}
+\begin{tabular}{ @{} l l @{} }
+    \textbf{Category} & \textbf{Skills} \\ \hline
+    \textbf{Programming Languages} & Java, Python, C, C++, JavaScript, PHP, Bash, MySQL \\ 
+    \textbf{Systems and Tools} & Linux, Docker, SQL, Kernel Programming \\ 
+    \textbf{Computer Science Concepts} & Database Management Systems, Operating Systems, Object-Oriented Programming (OOP) \\ 
+    \textbf{Languages} & Malayalam, Hindi, English \\ 
+\end{tabular}
 
 
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-% TECHINICAL STRENGTHS	
-%----------------------------------------------------------------------------------------
-\begin{rSection}{SKILLS}
-\vspace{0.25cm}
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Programming Languages & Java, Python, C, C++, JavaScript, PHP, Shell (bash), MySQL \\
-Systems & Linux, SQL, Docker, Kernel Programming \\
-Computer Fundamentals &  Database Management Systems, Operating Systems, OOPS \\
-Linguistic abilities & Malayalam, Hindi, English\\
-\end{tabular}\\
-\end{rSection}
-\begin{rSection}{RESEARCH PUBLICATIONS} 
-\vspace{0.25cm}
-\begin{itemize}
+\section*{Research Publications}
+\begin{itemize}[leftmargin=*]
    \item \textbf{\textit{Enhancing Disaster Response: A Study on SDN-Integrated Alarm and Alert Systems Using Cooja Simulations}} \\
-   \textbf{ Accepted at  NKCON - 2023 Conference. Published by IEEE}\\
-This paper assesses SDN-integrated alarm systems using Cooja simulations for disaster response efficiency during critical events like earthquakes. It highlights improved dependability and responsiveness, comparing RPL to SDN and suggesting solutions for IoT network challenges.
-The study evaluates SDN integration in alarm systems through Cooja simulations, emphasizing enhanced performance during disasters. It compares RPL and SDN protocols, proposing solutions for IoT network challenges to improve the effectiveness of alert systems.
-   
-
+        \textbf{Accepted at NKCON – 2023 Conference. Published by IEEE} \\
+        This paper assesses SDN-integrated alarm systems using Cooja simulations for disaster response efficiency during critical events like earthquakes. It highlights improved dependability and responsiveness, comparing RPL to SDN and suggesting solutions for IoT network challenges.
    \item \textbf{\textit{ONOS SDN Framework: Assessing the Impact of Single and Multi-Controller Architectures on Network Efficiency}} \\
-   \textbf{Accepted at SmartCom - 2024 Conference. Published by Springer} \\
-This paper analyzes ONOS and Mininet in SDN, comparing single-controller and multi-controller architectures. Single controllers simplify management, while multi-controllers enhance scalability. The study evaluates performance metrics like latency, throughput, and scalability, considering fault tolerance and management complexity. By presenting evidence from experiments and real-world cases, the paper guides network professionals in choosing the right SDN architecture with insights into technology trends and future challenges. 
+        \textbf{Accepted at SmartCom – 2024 Conference. Published by Springer} \\
+        This paper analyzes ONOS and Mininet in SDN, comparing single-controller and multi-controller architectures. Single controllers simplify management, while multi-controllers enhance scalability. The study evaluates performance metrics like latency, throughput, and scalability, considering fault tolerance and management complexity.
 \end{itemize}
 
-\end{rSection}
-\begin{rSection}{Final Year Project} 
-\vspace{0.25cm}
-\begin{itemize}
-    \item \textbf{\textit{Harnessing The Power Of Blockchain in SDN
-For Distributed Applications}} 
+\section*{Final Year Project}
+\textbf{\textit{Harnessing The Power Of Blockchain in SDN For Distributed Applications}} \\
+SDN offers flexibility and programmability but lacks in providing robust application security. This project aims to create a secure platform for DApps by integrating blockchain which helps in establishing a decentralized, tamper-resistant system enhancing network security. ONOS controller cluster was created to eradicate the single point of failure. Rigorous evaluation will gauge performance, security, scalability, highlighting blockchain's potential in addressing security challenges.
 
-  SDN offers flexibility and programmability
-but lacks in providing robust application
-security. This project aims to create a secure
-platform for DApps by integrating blockchain
-which helps in establishing a decentralized,
-tamper-resistant system enhancing network
-security. ONOS controller cluster was created
-to eradicate the single point of failure.
-Rigorous evaluation will gauge performance,
-security, scalability, highlighting blockchain's
-potential in addressing security challenges
-\end{itemize}
-\end{rSection}
-
-\begin{rSection}{Leadership Activities} 
-\vspace{0.25cm}
-\begin{itemize}
-    \item Mentored aspiring students as a key figure in the HackerSpace Club, arranging numerous hackathons and providing guidance to foster innovative projects and skill development.
-    \item Effectively led a capstone project by orchestrating team collaboration, managing timelines, and implementing innovative solutions. Maintained proactive problem-solving and fostered a collaborative team environment to ensure project success.
+\section*{Leadership Activities}
+\begin{itemize}[leftmargin=*]
+   \item Mentored aspiring students as a key figure in the HackerSpace Club, arranging numerous hackathons and providing guidance to foster innovative projects and skill development.
+   \item Effectively led a capstone project by orchestrating team collaboration, managing timelines, and implementing innovative solutions. Maintained proactive problem-solving and fostered a collaborative team environment to ensure project success.
 \end{itemize}
 
+\section*{Technical Projects}
+\begin{itemize}[leftmargin=*]
+   \item \textbf{\href{https://github.com/Adarsh-Liju/ProjectTurtle}{Project Turtle}} \\
+        Developed a comprehensive Shell script designed for the streamlined installation of essential tools and programs on Linux-based systems. The script meticulously handles the installation process, ensuring optimal configuration and compatibility across a diverse range of Linux distributions. Implemented error handling mechanisms, conducted rigorous compatibility testing, and documented detailed usage instructions for enhanced reliability and user experience.
+   \item \textbf{\href{https://github.com/Adarsh-Liju/yamc}{Yet Another Markdown Converter}} \\
+        A Command Line Interface (CLI) tool designed to convert Markdown files to plain HTML.This versatile tool not only facilitates the conversion of Markdown-formatted documents into HTML but also offers additional theming and styling options. Users can customize the appearance of the generated HTML output according to their preferences, enhancing the visual presentation of the content.
+   \item \textbf{\href{https://github.com/Adarsh-Liju/Misc-Kernel-Driver}{Misc Kernel Driver}} \\
+        Engineered a Linux kernel module to seamlessly implement a straightforward character driver, ensuring robust functionality. Utilized C programming and Makefile for code development, emphasizing efficiency and adherence to kernel module best practices. Thoroughly tested and documented the module, prioritizing reliability and providing clear usage guidelines for seamless integration.
+   \item \textbf{\href{https://github.com/Adarsh-Liju/DoctorPres}{DoctorPres}} \\
+        Developed within a Python environment, a doctor prescription system utilizing Streamlit and a MySQL database serves as a comprehensive solution for managing and generating medical prescriptions. This system leverages Streamlit's user-friendly interface to facilitate an intuitive user experience, while the MySQL database ensures secure storage and retrieval of patient information. The tech stack employed includes Python for application logic and Streamlit for the frontend, ensuring a seamless and efficient prescription management system with a robust foundation.
+   \item \textbf{\href{https://github.com/Adarsh-Liju/EnigmaCipher}{EnigmaCipher}} \\
+        Inspired by the Enigma machine, a modern cipher is crafted, blending historical cryptography with contemporary algorithms. This encryption system offers a challenging method for encoding and decoding messages. Developed with programming languages, it provides a unique and intriguing approach to secure communication. The Enigma-based cipher combines tradition and innovation in a compact cryptographic framework.
+\end{itemize}
 
-\end{rSection}
-\begin{rSection}{Technical PROJECTS}
-\vspace{0.25cm}
-\item \textbf{\href{https://github.com/Adarsh-Liju/ProjectTurtle}{Project Turtle}} {Developed a comprehensive Shell script designed for the streamlined installation of essential tools and programs on Linux-based systems. The script meticulously handles the installation process, ensuring optimal configuration and compatibility across a diverse range of Linux distributions. Implemented error handling mechanisms, conducted rigorous compatibility testing, and documented detailed usage instructions for enhanced reliability and user experience.}
-
-\item \textbf{\href{https://github.com/Adarsh-Liju/yamc}{Yet Another Markdown Converter}} {A Command Line Interface (CLI) tool designed to convert Markdown files to plain HTML. This versatile tool not only facilitates the conversion of Markdown-formatted documents into HTML but also offers additional theming and styling options. Users can customize the appearance of the generated HTML output according to their preferences, enhancing the visual presentation of the content. The CLI nature of the tool ensures ease of use in a terminal environment, providing users with a flexible and automated solution for Markdown to HTML conversion.}
-
-\item \textbf{\href{https://github.com/Adarsh-Liju/Misc-Kernel-Driver}{Misc Kernel Driver}} {Engineered a Linux kernel module to seamlessly implement a straightforward character driver, ensuring robust functionality.Utilized C programming and Makefile for code development, emphasizing efficiency and adherence to kernel module best practices.Thoroughly tested and documented the module, prioritizing reliability and providing clear usage guidelines for seamless integration.}
-
-\item \textbf{\href{https://github.com/Adarsh-Liju/DoctorPres}{DoctorPres}} {Developed within a Python environment, a doctor prescription system utilizing Streamlit and a MySQL database serves as a comprehensive solution for managing and generating medical prescriptions. This system leverages Streamlit's user-friendly interface to facilitate an intuitive user experience, while the MySQL database ensures secure storage and retrieval of patient information. The tech stack employed includes Python for application logic and Streamlit for the frontend, ensuring a seamless and efficient prescription management system with a robust foundation.}
-
-\item \textbf{\href{https://github.com/Adarsh-Liju/EnigmaCipher}{EnigmaCipher}} {Inspired by the Enigma machine, a modern cipher is crafted, blending historical cryptography with contemporary algorithms. This encryption system offers a challenging method for encoding and decoding messages. Developed with programming languages, it provides a unique and intriguing approach to secure communication. The Enigma-based cipher combines tradition and innovation in a compact cryptographic framework.}
-\end{rSection} 
-\vspace{0.25cm}
-\begin{rSection}{EXPERIENCE}
-\vspace{0.25cm}
-\textbf{Subject Matter Expert for Linux } \hfill June 2022 – Present\\
+\section*{Experience}
+\textbf{Subject Matter Expert for Linux} \hfill June 2022 – Present \\
 PESU I/O \hfill \textit{Bengaluru, India}
- \begin{itemize}
-    \itemsep -3pt {} 
-           \item Taught students the basics of Linux.
-    \item Instructed on the usage of Free and Open Source Software (FOSS) and Command Line Interface (CLI) tools.
-    \item Conducted in-depth sessions on kernel modules and programming within the Linux environment.
-    \item Facilitated group discussions and debates to encourage interactive learning and collaborative exploration of Linux concepts.
- \end{itemize}
-
-\textbf{Research Intern} \hfill May 2022 – July 2022\\
-CHIPS  \hfill \textit{Bengaluru, India}
- \begin{itemize}
-    \itemsep -3pt {} 
-      \item Conducted in-depth research on Manycore RISC-V architecture.
-  \item Evaluated and compared various RISC-V architectures to identify optimal design features.
-  \item Executed comprehensive benchmarking on code implementing both OpenMP and MPI, providing valuable insights into performance and scalability.
-     
-     
+\begin{itemize}[leftmargin=*]
+   \item Taught students the basics of Linux.
+   \item Instructed on the usage of Free and Open Source Software (FOSS) and Command Line Interface (CLI) tools.
+   \item Conducted in-depth sessions on kernel modules and programming within the Linux environment.
+   \item Facilitated group discussions and debates to encourage interactive learning and collaborative exploration of Linux concepts.
 \end{itemize}
 
-\end{rSection} 
-%----------------------------------------------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-
-
-
+\textbf{Research Intern} \hfill May 2022 – July 2022 \\
+CHIPS \hfill \textit{Bengaluru, India}
+\begin{itemize}[leftmargin=*]
+   \item Conducted in-depth research on Manycore RISC-V architecture.
+   \item Evaluated and compared various RISC-V architectures to identify optimal design features.
+   \item Executed comprehensive benchmarking on code implementing both OpenMP and MPI, providing valuable insights into performance and scalability.
+\end{itemize}
 
 \vfill
 \hspace*{\fill} -Adarsh Liju Abraham

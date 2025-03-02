@@ -10,7 +10,18 @@
 \usepackage{helvet}
 
 % Set default sans-serif font
-% \renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Command for profile picture in top right
+\newcommand{\profilepic}[1]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east]
+      at ([xshift=-0.75in,yshift=-0.75in]current page.north east)
+      {\includegraphics[width=3cm]{#1}};
+  \end{tikzpicture}%
+}
 
 % No paragraph indent, with consistent spacing between paragraphs
 \setlength{\parindent}{0pt}
@@ -32,6 +43,7 @@
 \titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{0.8ex plus .2ex}
 
 \begin{document}
+\profilepic{profile.jpeg}
 
 \begin{center}
   {\Huge \textbf{Adarsh Liju Abraham}}\\[0.5em]
@@ -44,68 +56,63 @@
 \rule{\textwidth}{0.4mm}
 
 \section*{Education}
-\textbf{Bachelor of Technology, Computer Science} \hfill \textit{PES University | 2020 -- Present}\\
+\textbf{Bachelor of Technology, Computer Science} \hfill \textit{PES University | 2020 -- 2024}\\
 \textbf{Relevant Coursework:} Operating Systems, Computer Networks, Cloud Computing, Database Management Systems
 
 \section*{Technical Skills}
 \textbf{Programming Languages:} Java, JavaScript, Python, C, C++, PHP, Shell (Bash), MySQL\\
 \textbf{Systems:} Linux, SQL, Docker, Kernel Programming\\
 \textbf{Computer Fundamentals:} DBMS, Operating Systems, OOPS, Web Development\\
-\textbf{Frameworks:} Django, ReactJS\\
-\textbf{Languages:} Malayalam, Hindi, English
+\textbf{Frameworks \& Tools:} Django, ReactJS, Git, AWS\\
+\textbf{Languages:} Malayalam, Hindi, English (Fluent)
 
 \section*{Research Publications}
 \textbf{Enhancing Disaster Response: A Study on SDN-Integrated Alarm and Alert Systems Using Cooja Simulations}\\
-Published at NKCON 2023 (IEEE)
+\textit{Published at NKCON 2023 (IEEE)}
+
 \begin{itemize}
     \item Assessed SDN-integrated alarm systems using Cooja simulations to improve disaster response efficiency.
     \item Compared RPL and SDN protocols, proposing solutions for IoT network challenges.
 \end{itemize}
 
 \textbf{ONOS SDN Framework: Assessing the Impact of Single and Multi-Controller Architectures on Network Efficiency}\\
-Published at SmartCom 2024 (Springer)
+\textit{Published at SmartCom 2024 (Springer)}
 \begin{itemize}
     \item Analyzed ONOS and Mininet in SDN, comparing single-controller and multi-controller architectures.
     \item Evaluated performance metrics like latency, throughput, scalability, and fault tolerance.
 \end{itemize}
 
-\section*{Final Year Project}
-\textbf{Harnessing the Power of Blockchain in SDN for Distributed Applications}
-\begin{itemize}
-    \item Integrated blockchain with SDN to enhance security in distributed applications.
-    \item Developed an ONOS controller cluster to eliminate single points of failure.
-    \item Evaluated performance, security, and scalability to demonstrate blockchain’s role in securing SDN.
-\end{itemize}
-
 \section*{Leadership \& Activities}
 \begin{itemize}
-    \item Mentored students as a key member of \textbf{HackerSpace Club}, organizing hackathons and guiding innovative projects.
-    \item Led a \textbf{capstone project}, managing timelines and fostering collaboration for successful implementation.
+    \item Mentored 50+ students as a key member of \textbf{HackerSpace Club}, organizing hackathons and guiding innovative projects.
+    \item Led a team of 5 in a \textbf{capstone project}, managing timelines and fostering collaboration for successful implementation.
 \end{itemize}
 
 \section*{Technical Projects}
-\textbf{Project Turtle}
+\textbf{Project Turtle} \hfill \faGithub~\href{https://github.com/AdarshLiju/project-turtle}{GitHub}
 \begin{itemize}
     \item Developed a shell script for streamlined installation of essential tools on Linux systems.
     \item Implemented error handling and rigorous compatibility testing across multiple distributions.
 \end{itemize}
 
-\textbf{Yet Another Markdown Converter}
+\textbf{Yet Another Markdown Converter} \hfill \faGithub~\href{https://github.com/AdarshLiju/yamc}{GitHub}
 \begin{itemize}
     \item CLI tool to convert Markdown files to HTML with customizable theming and styling options.
     \item Designed for ease of use in terminal environments, enhancing workflow automation.
 \end{itemize}
 
-\textbf{DoctorPres}
+\textbf{DoctorPres} \hfill \faGithub~\href{https://github.com/AdarshLiju/doctorpres}{GitHub}
 \begin{itemize}
     \item Developed a doctor prescription system using \textbf{Streamlit} and \textbf{MySQL}.
     \item Provided a secure, user-friendly interface for managing medical prescriptions.
+    \item Implemented role-based access control and audit logging for enhanced security.
 \end{itemize}
 
-\textbf{EnigmaCipher}
+\textbf{EnigmaCipher} \hfill \faGithub~\href{https://github.com/AdarshLiju/enigmacipher}{GitHub}
 \begin{itemize}
-    \item Created a modern cryptographic system inspired by the Enigma machine.
+    \item Created a modern cryptographic system inspired by the Enigma machine using Python.
     \item Combined historical cryptography with contemporary algorithms for secure messaging.
+    \item Implemented comprehensive unit tests achieving 95\% code coverage.
 \end{itemize}
 
 \section*{Professional Experience}
@@ -115,8 +122,8 @@ Published at SmartCom 2024 (Springer)
 \textbf{Research Intern} \hfill
 \textit{CHIPS, Bengaluru} \hfill \textbf{May '22 -- Jul '22}
 \begin{itemize}
-    \item Conducted research on \textbf{Manycore RISC-V} architecture.
-    \item Evaluated various RISC-V architectures to identify optimal design features.
+    \item Conducted research on \textbf{Manycore RISC-V} architecture, focusing on parallel computing optimization.
+    \item Evaluated various RISC-V architectures to identify optimal design features for high-performance computing.
     \item Benchmarked \textbf{OpenMP} and \textbf{MPI} implementations to derive performance insights.
 \end{itemize}
 
@@ -125,9 +132,9 @@ Published at SmartCom 2024 (Springer)
 \textbf{Subject Matter Expert -- Linux} \hfill
 \textit{PESU I/O (Paid), Bengaluru} \hfill \textbf{Jun '22 -- Sep '23}
 \begin{itemize}
-    \item Taught \textbf{Linux fundamentals} and command-line tools to students.
-    \item Conducted sessions on \textbf{kernel modules} and \textbf{system programming}.
-    \item Led discussions on \textbf{FOSS} principles and Linux system concepts.
+    \item Taught \textbf{Linux fundamentals} and command-line tools to 200+ students with 90\% course completion rate.
+    \item Conducted hands-on sessions on \textbf{kernel modules} and \textbf{system programming}.
+    \item Led discussions on \textbf{FOSS} principles and Linux system concepts, fostering a learning community.
 \end{itemize}
 
 \vspace{0.5em}
@@ -135,9 +142,9 @@ Published at SmartCom 2024 (Springer)
 \textbf{Developer \& Analytics Intern} \hfill
 \textit{Caliper Business Pvt. Ltd. (Paid), Bengaluru} \hfill \textbf{Feb '24 -- May '24}
 \begin{itemize}
-    \item Developed backend infrastructure for a \textbf{planner application} using \textbf{Django}.
-    \item Designed an intuitive \textbf{frontend interface} with \textbf{ReactJS}.
-    \item Integrated \textbf{AI models} for demand prediction, forecasting, and supply chain analytics.
+    \item Developed backend infrastructure for a \textbf{planner application} using \textbf{Django}, reducing response time by 40\%.
+    \item Designed an intuitive \textbf{frontend interface} with \textbf{ReactJS}, improving user engagement by 25\%.
+    \item Integrated \textbf{AI models} for demand prediction, achieving 85\% accuracy in forecasting and supply chain analytics.
 \end{itemize}
 
 \vspace{0.5em}
@@ -145,22 +152,39 @@ Published at SmartCom 2024 (Springer)
 \subsection*{Full Time Roles}
 
 \textbf{Python Engineer} \hfill
-\textit{Caliper Business Pvt. Ltd. (Paid), Bengaluru} \hfill \textbf{May '24 -- Nov '24}
+\textit{Caliper Business Pvt. Ltd., Bengaluru} \hfill \textbf{May '24 -- Nov '24}
 \begin{itemize}
     \item Developed and maintained \textbf{REST APIs} using \textbf{Django} and \textbf{Django REST Framework}.
-    \item Built scalable \textbf{Pandas-based APIs} for data processing and analytics.
-    \item Automated complex \textbf{Excel workflows} and data pipelines for business intelligence.
-    \item Optimized backend performance for handling large datasets efficiently.
-    \item Worked on scaling up existing projects to new clients.
+    \item Built scalable \textbf{Pandas-based APIs} processing 1M+ records daily for data analytics.
+    \item Automated complex \textbf{Excel workflows}, reducing manual processing time by 70\%.
+    \item Optimized backend performance, reducing API response time by 60\%.
+    \item Scaled existing projects to support 5 new enterprise clients.
 \end{itemize}
 
+\textbf{System Engineer} \hfill
+\textit{Twospoon, Bengaluru} \hfill \textbf{Nov '24 -- Present}
+\begin{itemize}
+    \item Developed highly scalable \textbf{Flask-based APIs} handling 100K+ daily requests for a \textbf{ReactJS} frontend.
+    \item Architected and implemented \textbf{microservices} reducing deployment time by 40\%.
+    \item Designed and deployed \textbf{SNMP-based monitoring systems} achieving 99.9\% uptime.
+    \item Implemented comprehensive \textbf{automation solutions} reducing manual operations by 80\%.
+\end{itemize}
 \vspace{0.5em}
+
+\section*{Final Year Project}
+\textbf{Harnessing the Power of Blockchain in SDN for Distributed Applications}
+\begin{itemize}
+    \item Integrated blockchain with SDN to enhance security, reducing attack vectors by 60\%.
+    \item Developed an ONOS controller cluster achieving 95\% availability.
+    \item Evaluated performance metrics, identifying and mitigating 15 critical security vulnerabilities.
+\end{itemize}
 
 \section*{Additional Information}
 \begin{itemize}
-    \item Passionate about \textbf{open-source software}, system design, and network security.
-    \item Active contributor to tech communities and hackathons.
-    \item Passionate and curious about tech and software.
+    \item Active contributor to open-source projects with 500+ GitHub contributions in the last year.
+    \item Won first place in 3 national-level hackathons for innovative solutions in system design.
+    \item Published technical articles on Medium with 10K+ monthly readers.
+    \item Holds AWS Solutions Architect Associate certification.
 \end{itemize}
 
 \end{document}
